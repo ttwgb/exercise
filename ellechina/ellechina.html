@@ -1,0 +1,840 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html' charset="UTF-8" />
+		<meta name="Author" content="Uowen" />
+		<title>Ellechina</title>
+		<style>
+		body,ul,li,p{
+			margin:0;
+			padding:0;
+		}
+		a {
+			text-decoration:none;
+			color:#000;
+		}
+		form input{
+			padding:0;
+		}
+		ul,li{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		img {
+			vertical-align:middle;
+		}
+		.fl {
+			float:left;
+		}
+		.fr {
+			float:right;
+		}
+		.ib {
+			display:inline-block;
+		}
+		.clearF:after {
+			content:'';
+			display:block;
+			clear:both;
+		}
+		.center {
+			width:1000px;
+			margin:auto;
+		}
+		.scale {
+			transform:scale(1.2) .4s;
+		}
+	/* 顶部 */
+		#top {
+			width:100%;
+			height:200px;
+			background:url('res/1498094428872.jpg') center 0/1920px;
+		}
+		#top img {
+			margin:17px 0;
+		}
+	/* 导航 上*/
+		#header-box {
+			border-bottom:1px solid #000;
+			font-family:'Microsoft Yahei';
+		}
+		#header-box a:hover{
+			color:red;
+		}
+		.arrow a,.loginbar>a,.line{
+			height:41px;
+			line-height:41px;
+			background:url('res/sprit.png') no-repeat;
+			font-size:12px;
+
+		}
+		.arrow a{
+			padding-left:16px;
+			margin-right:10px;
+			background-position: 0 3px;
+		}
+		.arrow a:hover{
+			background-position:0 -28px;
+		}
+		.loginbar>a{
+			padding-left:27px;
+		}
+		.loginbar .register{
+			background-position:0 -54px;
+		}
+		.line {
+			width:1px;
+			background-position:-1px -682px;
+			margin:0 10px;
+			vertical-align:middle;
+		}
+		.loginbar .signin {
+			background-position:0 -227px;
+			margin-right:18px;
+		}
+		.loginbar .register:hover{
+			background-position:0 -97px;
+		}
+		.loginbar .signin:hover {
+			background-position:0 -270px;
+		}
+		.followelle{
+			position:relative
+		}
+		.follow{
+			position:relative;
+			z-index:300;
+			width:168px;
+			height:41px;
+			background:url('res/user.jpg');
+			vertical-align:middle;
+		}
+		.redicon{
+			position:absolute;
+			top:0px;
+			z-index:200px;
+			transition:top 1s;
+		}
+		.redicon a{
+			background:url('res/red-icon.jpg');
+			width:56px;
+			height:37px;
+		}
+		.redicon .wechat {
+			background-position:0 0;
+		}
+		.redicon .webo {
+			background-position:-56px 0;
+		}
+		.redicon .qzone {
+			background-position:-112px 0;
+		}
+		.followelle:hover .follow{
+			background:url('res/user-hover.jpg');
+		}
+		.followelle:hover .redicon{
+			top:42px;
+		}
+		.homepage-search {
+			position:relative;
+			width:205px;
+			height:41px;
+		}
+		.search {
+			width:162px;
+			height:41px;
+			padding-left:12px;
+			border:none;
+			outline:none;
+			font-size:14px;
+			color:#999;
+		}
+		.search-btn{
+			position:absolute;
+			top:0;
+			right:0;
+			width:41px;
+			height:32px;
+			background:url('res/sprit.png') 13px -317px;
+		}
+		.search-btn:hover{
+			background-position:13px -364px;
+		}
+	/* 导航 下 */
+		.nav {
+			border-bottom:5px solid #000;
+		}
+		.nav li{
+			float:left;
+		}
+		.nav a{
+			display:block;
+			line-height:38px;
+			padding:0 8px;
+			width:34px;
+		}
+		.nav .p{
+			padding:0 6px;
+		}
+		.nav .active{
+			color:#fff;
+			background:red;
+			padding:0 6px 0 7px;
+		}
+		.nav .ellefit {
+			width:52px;		
+		}
+		.nav .super{
+			width:initial;
+		}
+		.nav a:hover {
+			color:#fff;
+			background:red;
+		}
+	/* content top */
+		/* banner */
+		.c-top{
+			margin-top:30px;
+		}
+		.c-left {
+			width:680px;
+		}
+		.c-right {
+			width:300px;
+		}
+		.banner {
+			position:relative;
+			width:100%;
+			height:440px;
+		}
+		.prev,.next,.c-daily .play,.c-fashion .more,.c-beauty .more{
+			background:url('res/icons-sprite.png') no-repeat;
+		}
+		.prev,.next{
+			position:absolute;
+			width:23px;
+			height:43px;
+			top:204px;
+		}
+		.prev {
+			left:9px;
+			background-position:0 -120px;
+		}
+		.next {
+			left:646px;
+			background-position:0 -212px;
+		}
+		.prev:hover {
+			background-position:0 -166px;
+		}
+		.next:hover {
+			background-position:0 -258px;
+		}
+		/* 左下列表 */
+		.left-bottom {
+			margin-top:8px;
+		}
+		.left-bottom li{
+			float:left;
+			width:211px;
+			padding-left:6px;
+			background:url('res/dott.jpg') no-repeat -2px center;
+			margin-right:9px;
+		}
+		.left-bottom li a{
+			font:14px/30px 'Microsoft Yahei';
+		}
+		/* 右侧广告 */
+		.c-top .c-right img{
+			width:100%;
+		}
+	/* daily elle */
+		.c-daily {
+			margin-top:50px;
+		}
+		.c-daily .c-left {
+			width:670px;
+		}
+		.time {
+			position:relative;
+		}
+		.time span{
+			position:absolute;
+			top:11px;
+		}
+		.time .year {
+			top:9px;
+			left:14px;
+			width:40px;
+			height:40px;
+			background:url('res/Year.png') -82px 0;
+
+		}
+		.month,.day{
+			width:54px;
+			height:38px;
+			background:url('res/number.png');
+		}
+		.month {
+			left:56px;
+			background-position:0 -1198px;
+		}
+		.day {
+			left:123px;
+			background-position:0 -470px;
+		}
+		.dailyelle {
+			height:56px;
+		}
+		.dailyelle img{
+			margin:7px 0 0 15px;
+		}
+		.title {
+			border-bottom:4px solid #000;
+		}
+		.c-daily .c-left ul {
+			margin-top:20px;
+		}
+		.c-daily .c-left li {
+			float:left;
+			width:300px;
+			height:300px;
+			padding:10px;
+			background:url('res/322322.jpg') no-repeat;
+		}
+		.mar-r{
+			margin-right:30px;
+		}
+		.mar-t {
+			margin-top:30px;
+		}
+		.c-daily li div {
+			margin: 0 10px;
+			padding:16px 0;
+			text-align:center;
+			font-size:18px;
+			border-bottom:1px dotted #000;
+		}
+		.c-daily li div a:hover,.hotlist .txt:hover,.c-fashion li a:hover,.c-beauty li a:hover{
+			text-decoration:underline;
+		}
+		.c-daily p{
+			text-align:center;
+			
+		}
+		.c-daily .time-ago{
+			display:inline-block;
+			padding:6px 0 4px 35px;
+			background:url('res/time.png') no-repeat;
+			font-size:14px;
+			margin-top:9px;
+		}
+		.c-daily .c-left li>a {
+			position:relative;
+			display:block;
+			height:200px;
+			width:300px;
+			overflow:hidden;
+		}
+		.c-daily li>a img,.mix-link a img,.inner-middle .cover img{ 
+			transition: transform .4s ;
+		}
+		.c-daily li>a:hover img,.mix-link a:hover img,.inner-middle .cover:hover img{
+			transform:scale(1.1);
+			transition: transform .4s ;
+		}
+		.c-daily .video:hover img {
+			transform:scale(1);
+		}
+		.c-daily .play{
+			position:absolute;
+			width:66px;
+			height:66px;
+			top:50%;
+			left:50%;
+			margin:-33px 0 0 -33px;
+			background-position:0 -368px;
+		}
+		.c-daily li>a:hover .play {
+			background-position:0 -437px;
+		}
+		.hot {
+			width:50px;
+			height:56px;
+		}
+		.todayhot img {
+			margin-top:4px;
+		}
+		.hotlist li{
+			width:100%;
+			padding:23px 0;
+			border-bottom:1px dotted #000;
+		}
+		.hotlist .no1 {
+			background:url('res/no1.jpg') no-repeat 0 34px;
+		}
+		.hotlist .no2 {
+			background:url('res/no2.jpg') no-repeat 0 34px;
+		}
+		.hotlist .no3 {
+			background:url('res/no3.jpg') no-repeat 0 34px;
+		}
+		.hotlist .no4 {
+			background:url('res/no4.jpg') no-repeat 0 34px;
+		}
+		.hotlist .no5 {
+			background:url('res/no5.jpg') no-repeat 0 34px;
+		}
+		.hotlist .pic{
+			margin-left:34px;
+			width:90px;
+			height:90px;
+			overflow:hidden;
+		}
+		.hotlist .pic img{
+			width:90px;
+			height:90px;
+		}
+		.hotlist .txt {
+			font:14px/22px 'Microsoft Yahei';
+			margin:6px 0 0 10px;
+			width:166px;
+		}
+	/* fashion-s */
+		.c-fashion .title,.c-beauty .title{
+			position:relative;
+			margin-top:50px;
+			text-align:center;
+			border-bottom:1px solid #000;
+		}
+		.c-fashion .t-img,.c-beauty .t-img{
+			display:inline-block;
+			padding:0 30px 15px 30px;
+			border-bottom:4px solid #000;
+		}
+		.c-fashion .more,.c-beauty .more{
+			position:absolute;
+			width:40px;
+			height:20px;
+			bottom:0;
+			right:0;
+			background-position:0 -506px;
+		}
+		.c-fashion .more:hover,.c-beauty .more:hover {
+			background-position:0 -529px;
+		}
+		.margin-ul{
+			margin:10px auto 0;	
+		}
+		.c-fashion>ul{
+			width:352px;
+		}
+		.c-beauty>ul{
+			width:400px;
+		}
+		.c-fashion>ul li,.c-beauty>ul li{
+			float:left;
+			margin-right:7px;
+			font-size:14px;
+			font-weight:600;
+		} 
+		.red-li {
+			color:red;
+		}
+		.mix-link{
+			margin-top:30px;
+		}
+		.mix-link li{
+			float:left;
+			width:300px;
+			text-align:center;
+			border-bottom:1px dotted #000;
+		}
+		.mix-link li.beauty{
+			width:450px;
+		}
+		.mix-link li.beauty.afr{
+			float:right;
+		}
+		.mix-link a:nth-child(1){
+			display:block;
+			width:100%;
+			height:400px;
+			overflow:hidden;
+		}
+		.mix-link .beauty a:nth-child(1){
+			height:300px;
+		}
+		.mix-link .txt{
+			display:block;
+			margin:20px 0;
+			font-size:21px;
+			line-height:21px;
+		}
+		.mix-link .mid {
+			margin:0 50px;
+		}
+		.c-fashion .inner-middle{
+			margin-top:30px;
+			border:10px solid #e4e4e4;
+		}
+		.c-fashion .inner-middle li{
+			float:left;
+			width:480px;
+			height:240px;
+			border:5px solid #e4e4e4;
+			overflow:hidden;
+		}
+		.c-fashion .inner-middle .tf{
+			display:table;
+			width:240px;
+			height:240px;
+		}
+		.c-fashion .inner-middle .i-title {
+			display:table-cell;
+			width:240px;
+			text-align:center;	
+			vertical-align:middle;
+		}
+		.c-fashion .inner-middle .i-title p.imgtxt{
+			width:170px;
+			border-bottom:1px dotted #000;
+			margin:auto;
+		}
+		.c-fashion .inner-middle .i-title img {
+			padding:8px 0;
+			
+		}
+		.c-fashion .inner-middle .i-title p{
+			margin:11px 5px;
+			font:24px/32px 'Microsoft Yahei';
+		}
+		</style>
+	</head>
+<body>
+	<div id='top'>
+		<div class='center'>
+			<a href='http://www.ellechina.com'><img src='res/logo_black.png'/></a>
+		</div>
+	</div>
+	<div id='header'>
+		<div id='header-box'>
+			<div class='center clearF'>
+				<div class='arrow fl'>
+					<a href=''>杂志订阅</a>
+					<a href=''>ELLE信用卡</a>
+				</div>
+				<div class='loginbar fr'>
+					<a class='register ib' href=''>注册Register</a>
+					<i class='line ib'></i>
+					<a class='signin ib' href=''>登录Sign in</a>
+					<div class='followelle ib'>
+						<a href='' class='follow ib'></a>
+						<div class='redicon'>
+							<a class='wechat fl' href=''></a>
+							<a class='webo fl' href=''></a>
+							<a class='qzone fl' href=''></a>
+						</div>
+					</div>
+					<form method='post' action='' id='homepage_search' class='homepage-search ib' name='' >
+						<input class='search' type='text' id='' name=''/>
+						<a class='search-btn' href=''></a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<ul class='nav center clearF'>
+			<li>
+				<a href='' class='active p'>首页</a>
+			</li>
+			<li>
+				<a href='' >时装</a>
+			</li>
+			<li>
+				<a href='' >奢华</a>
+			</li>
+			<li>
+				<a href='' >美容</a>
+			</li>
+			<li>
+				<a href='' >美妆</a>
+			</li>
+			<li>
+				<a href='' >美发</a>
+			</li>
+			<li>
+				<a href='' >明星</a>
+			</li>
+			<li>
+				<a href='' >珠宝</a>
+			</li>
+			<li>
+				<a href='' >腕表</a>
+			</li>
+			<li>
+				<a href='' >生活</a>
+			</li>
+			<li>
+				<a href='' >新娘</a>
+			</li>
+			<li>
+				<a href='' >专题</a>
+			</li>
+			<li>
+				<a href='' >男士</a>
+			</li>
+			<li>
+				<a href='' >家居</a>
+			</li>
+			<li>
+				<a href='' >品牌</a>
+			</li>
+			<li>
+				<a href='' >论坛</a>
+			</li>
+			<li>
+				<a href='' >博客</a>
+			</li>
+			<li>
+				<a class='ellefit p' href='' >ELLEfit</a>
+			</li>
+			<li>
+				<a class='super p' href='' >superELLE</a>
+			</li>
+		</ul>
+	</div>
+	<div id='content'>
+		<div class='c-top center clearF'>
+			<div class='c-left fl'>
+				<div class='banner'>
+					<ul>
+						<li><a href=''><img src='res/1498716202752.jpg'/></a></li>
+					</ul>
+					<a class='prev' href=''></a>
+					<a class='next' href=''></a>
+				</div>
+				<ul class='left-bottom clearF'>
+					<li><a href=''>今夏最美的元素是飘带！</a></li>
+					<li><a href=''>编发+马尾和夏天最配！</a></li>
+					<li><a href=''>美少女标语杨幂穿上身</a></li>
+					<li><a href=''>夏天穿百褶裙也有技巧！</a></li>
+					<li><a href=''>脸上这个部位凹陷最显老</a></li>
+					<li><a href=''>全智贤二胎确认家庭幸福</a></li>
+				</ul>
+			</div>
+			<div class='c-right fr'>
+				<a href=''><img src='res/11298_2.jpg'/></a>
+			</div>
+		</div>
+		<div class='c-daily center clearF'>
+			<div class='c-left fl'>
+				<div class='clearF title'>
+					<div class='time fl'>
+						<img src='res/2016time.jpg'/>
+						<span class='year'></span>
+						<span class='month'></span>
+						<span class='day'></span>
+					</div>
+					<div class='dailyelle fl'>
+						<a href=''><img src='res/dailyelle.png'/></a>
+					</div>
+				</div>
+				<ul class='clearF'>
+					<li class='mar-r'>
+						<a href=''><img src='res/thumb_300_200_1498530237689.jpg'/></a>
+						<div>
+							<a href=''>迷你娱乐圈的萌娃们</a>
+						</div>
+						<p><span class='time-ago'>9小时前</span></p>
+					</li>
+					<li>
+						<a href=''><img src='res/thumb_300_200_1498658521597.jpg'/></a>
+						<div>
+							<a href=''>阔腿裤里究竟藏着什么鞋？</a>
+						</div>
+						<p>
+							<span class='time-ago'>7小时前</span>
+						</p>
+					</li>
+					<li class='mar-r mar-t'>
+						<a href=''><img src='res/thumb_300_200_1499001090774.jpg'/></a>
+						<div>
+							<a href=''>上镜显胖？都怪这三款发型！</a>
+						</div>
+						<p><span class='time-ago'>1小时前</span></p>
+					</li>
+					<li class='mar-t'>
+						<a class='video' href=''><img src='res/thumb_300_200_1498448712229.jpg'/><span class='play'></span></a>
+						<div>
+							<a href=''>爱无束缚, 爱无距离</a>
+						</div>
+						<p><span class='time-ago'>3天前</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class='c-right fr'>
+				<div class='title clearF'>
+					<img class='hot fl' src='res/hot.jpg'/>
+					<a class='todayhot fl ' href=''><img src='res/todayshot.png'/></a>
+				</div>
+				<ul class='hotlist'>
+					<li class='no1 clearF'>
+						<a class='pic fl' href=''><img src='res/1498561576493.jpg'/></a>
+						<a class='txt fl' href=''>担心小粗跟会显笨重？各路明星来支招！</a>
+					</li>
+					<li class='no2 clearF'>
+						<a class='pic fl' href=''><img src='res/1499074008680.jpg'/></a>
+						<a class='txt fl' href=''>露肩衬衫明明是个坑</a>
+					</li>
+					<li class='no3 clearF'>
+						<a class='pic fl' href=''><img src='res/thumb_90_90_1499077786844.jpg'/></a>
+						<a class='txt fl' href=''>这些明星要变美妆博主了？先偷学这些变美小心机</a>
+					</li>
+					<li class='no4 clearF'>
+						<a class='pic fl' href=''><img src='res/1499079516662.jpg'/></a>
+						<a class='txt fl' href=''>街拍四小花，唐艺昕最近标签有点多！</a>
+					</li>
+					<li class='no5 clearF'>
+						<a class='pic fl' href=''><img src='res/1499080327129.jpg'/></a>
+						<a class='txt fl' href=''>你们的娜扎，“嗯...有点美”</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class='c-fashion center'>
+			<div class='title'>
+				<a href='' class='t-img'><img src='res/fashion.png'/></a>
+				<a href='' class='more'></a>
+			</div>
+			<ul class='margin-ul clearF'>
+					<li><a class='red-li' href="">ELLE教搭配</a></li>
+					<li><a href="">星衣Q</a></li>
+					<li><a href="">星单品</a></li>
+					<li><a href="">尖货</a></li>
+					<li><a href="">前沿</a></li>
+					<li><a href="">珠宝</a></li>
+					<li><a href="">腕表</a></li>
+					<li><a class='red-li' href="">街拍</a></li>
+			</ul>
+			<div class='mix-link'>
+				<ul class='clearF'>
+					<li>
+						<a href=''><img src='res/thumb_300_400_1499064215387.jpg'/></a>
+						<a href='' class='txt'>格纹元素明星争相演绎</a>
+					</li>
+					<li class='mid'>
+						<a href=''><img src='res/thumb_300_400_1497327069736.jpg'/></a>
+						<a href='' class='txt'>今夏穿帆布鞋才时髦！</a>
+					</li>
+					<li>
+						<a href=''><img src='res/thumb_300_400_1498733666952.jpg'/></a>
+						<a href='' class='txt'>刘雯是机场街拍界的清流！</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<ul class='inner-middle clearF'>
+					<li>
+						<div class='tf fl'>
+							<a href='' class='i-title'>
+								<p class='imgtxt'>
+									<img src='res/tag2.jpg'/>
+								</p>
+								<p>周冬雨最爱迷你包！</p>
+							</a>
+						</div>
+						<a href='' class='cover fl'>
+							<img src='res/1496975430333.gif'/>
+						</a>
+					</li>
+					<li>
+						<div class='tf fl'>
+							<a href='' class='i-title'>
+								<p class='imgtxt'>
+									<img src='res/tag5.jpg'/>
+								</p>
+								<p>今夏穿帆布鞋才时髦！</p>
+							</a>
+						</div>
+						<a href='' class='cover fl'>
+							<img src='res/thumb_240_240_1497925835709.jpg'/>
+						</a>
+					</li>
+					<li>
+						<div class='tf fr'>
+							<a href='' class='i-title'>
+								<p class='imgtxt'>
+									<img src='res/tag1.jpg'/>
+								</p>
+								<p>珠光宝气不如冷冽的银饰品？</p>
+							</a>
+						</div>
+						<a href='' class='cover fl'>
+							<img src='res/thumb_240_240_1499050941775.jpg'/>
+						</a>
+					</li>
+					<li>
+						<div class='tf fr'>
+							<a href='' class='i-title'>
+								<p class='imgtxt'>
+									<img src='res/tag3.jpg'/>
+								</p>
+								<p>4个问题，告诉你该不该买这枚表！</p>
+							</a>
+						</div>
+						<a href='' class='cover fl'>
+							<img src='res/1498783340303.jpg'/>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class='c-beauty center'>
+			<div class='title'>
+				<a href='' class='t-img'><img src='res/beauty.png'/></a>
+				<a href='' class='more'></a>
+			</div>
+			<ul class='margin-ul clearF'>
+				<li><a class='red-li' href="">美容专题</a></li>
+				<li><a href="">达人化妆包</a></li>
+				<li><a href="">编辑朋友圈</a></li>
+				<li><a href="">一周美颜志</a></li>
+				<li><a class='red-li' href="">一分钟美妆教室</a></li>
+			</ul>
+			<div class='mix-link'>
+				<ul class='clearF'>
+					<li class='beauty'>
+						<a href=''><img src='res/1499076630841.jpg'/></a>
+						<a href='' class='txt'>格纹元素明星争相演绎</a>
+					</li>
+					<li class='beauty afr'>
+						<a href=''><img src='res/1498534962122.gif'/></a>
+						<a href='' class='txt'>今夏穿帆布鞋才时髦！</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class='mix-link'>
+				<ul class='clearF'>
+					<li>
+						<a href=''><img src='res/thumb_300_400_1498702997197.jpg'/></a>
+						<a href='' class='txt'>格纹元素明星争相演绎</a>
+					</li>
+					<li class='mid'>
+						<a href=''><img src='res/thumb_300_400_1498727731353.jpg'/></a>
+						<a href='' class='txt'>今夏穿帆布鞋才时髦！</a>
+					</li>
+					<li>
+						<a href=''><img src='res/thumb_300_400_1498465154392.jpg'/></a>
+						<a href='' class='txt'>刘雯是机场街拍界的清流！</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class='superelle center'>
+
+		</div>
+	</div>
+</body>
+</html>
